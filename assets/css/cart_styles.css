@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFF8F0;
+}
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo a {
+    margin-right: 20px; /* Espacio entre el logo y los enlaces */
+}
+
+.logo img {
+    width: 120px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px; /* Espaciado entre cada enlace */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #392F5A;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FF8811; /* Cambia el color al pasar el cursor */
+    border-bottom: 2px solid #FF8811; /* Añade una línea debajo del enlace */
+}
+
+.login-btn,
+.register-btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #FFF8F0;
+}
+
+.login-btn {
+    background-color: #FF8811;   
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.login-btn:hover {
+    background-color: #9dd9d2;
+}
+
+
+.welcome-msg {
+    font-family: 'Poppins', sans-serif;
+    color: #392F5A; /* Color del texto */
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre el texto y el botón */
+    margin-right: 20px; /* Separación del mensaje del borde derecho */
+}
+
+/* Estilo del botón de cerrar sesión */
+.logout-btn {
+    background-color: #FF8811; /* Color del botón (rojo suave) */
+    color: #fff; /* Color del texto en el botón */
+    padding: 12px 15px; /* Espaciado interno del botón */
+    border: none;
+    border-radius: 30px; /* Bordes redondeados */
+    font-size: 1rem;
+    font-weight: 400;    
+    text-decoration: none; /* Quitar el subrayado del enlace */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover en el botón */
+.logout-btn:hover {
+    background-color: #9dd9d2; /* Color del botón al pasar el cursor (rojo más oscuro) */
+    cursor: pointer;
+}
+/* Contenedor principal del carrito */
+.cart-container {
+    width: 80%;
+    margin: 50px auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Tabla del carrito */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.cart-table th, .cart-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Producto en la tabla */
+.cart-product {
+    display: flex;
+    align-items: center;
+}
+
+.product-image {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.product-info h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Input de cantidad y botones */
+.input-cantidad {
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+}
+
+.btn-update, .btn-remove, .btn-checkout {
+    background-color: #ff8811;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btn-remove {
+    background-color: #ff8811;
+}
+
+.btn-checkout {
+    background-color: #ff8811;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.btn-update:hover, .btn-remove:hover, .btn-checkout:hover {
+    background-color: #333;
+}
+
+/* Resumen del carrito */
+.cart-summary {
+    text-align: right;
+}
+
+.cart-summary h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.cart-summary span {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilos para pantallas móviles (teléfonos) */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .btn-container button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    table {
+        font-size: 12px;
+        overflow-x: auto;
+    }
+}
+
+/* Estilos para pantallas medianas (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .form-container {
+        width: 80%;
+        padding: 15px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
+
+/* Estilos para pantallas grandes (escritorio) */
+@media (min-width: 1025px) {
+    .form-container {
+        width: 60%;
+        padding: 20px;
+    }
+
+    .navbar {
+        justify-content: space-around;
+    }
+
+    table {
+        font-size: 16px;
+    }
+}

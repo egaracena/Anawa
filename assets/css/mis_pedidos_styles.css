@@ -1,0 +1,81 @@
+.pedidos-container {
+    width: 80%;
+    margin: 50px auto;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+h2 {
+    margin-top: 30px;
+    font-size: 22px;
+    color: #333;
+}
+
+.pedidos-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pedidos-table th, .pedidos-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.pedidos-table th {
+    background-color: #ff8811;
+    color: white;
+}
+
+.pedidos-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.btn-whatsapp {
+    background-color: #ff8811;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.btn-whatsapp:hover {
+    background-color: #cf6e0c;
+}
+
+.btn-confirmar {
+    background-color: #ff8811;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.btn-confirmar:hover {
+    background-color: #cf6e0c;
+}
+
+
+p {
+    font-size: 18px;
+    text-align: center;
+    color: #777;
+}

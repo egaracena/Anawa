@@ -1,0 +1,133 @@
+/* Estilos del formulario para registrarse como Artesano */
+
+.form-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff8f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.form-container h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-container label {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.form-container select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.form-container select:focus {
+    border-color: #ff8811;
+    outline: none;
+}
+
+.form-container button {
+    background-color: #ff8811;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 60%;
+    margin-top: 15px; /* Para dar espacio entre los botones */
+}
+
+.form-container button:hover {
+    background-color: #392f5a;
+}
+
+
+/* Estilos para pantallas móviles (teléfonos) */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .btn-container button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    table {
+        font-size: 12px;
+        overflow-x: auto;
+    }
+}
+
+/* Estilos para pantallas medianas (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .form-container {
+        width: 80%;
+        padding: 15px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
+
+/* Estilos para pantallas grandes (escritorio) */
+@media (min-width: 1025px) {
+    .form-container {
+        width: 60%;
+        padding: 20px;
+    }
+
+    .navbar {
+        justify-content: space-around;
+    }
+
+    table {
+        font-size: 16px;
+    }
+}

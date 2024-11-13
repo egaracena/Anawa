@@ -1,0 +1,256 @@
+/* Estilo básico para el layout */
+body {
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #f4f4f9;
+    max-width: 100%; /* Evitar desbordamiento horizontal */
+    overflow-x: hidden; /* Eliminar desplazamiento horizontal */
+}
+
+/* Estilo del sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100%;
+    background-color: #392f5a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    max-width: 100%; /* Evitar desbordamiento horizontal */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 15px 20px;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+    border-radius: 4px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #9dd9d2;
+    color: white;
+}
+
+.sidebar ul li a.active {
+    background-color: #1abc9c;
+    color: white;
+}
+
+/* Contenido principal */
+.content {
+    margin-left: 240px;
+    padding: 20px;
+    width: calc(100% - 240px);
+    transition: margin-left 0.3s ease;
+    max-width: 100%; /* Ajustar ancho para evitar desbordamiento */
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+/* Estilos para tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Estilo para formularios */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form select, form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Estilo para botones */
+.btn-publicar, .btn-crear, .btn-asignar, .btn-actualizar-stock, .btn-reporte {
+    width: 100%;
+    margin-top: 10px;
+    background-color: #ff8811;
+}
+
+.btn-publicar:hover, .btn-crear:hover, .btn-asignar:hover, .btn-actualizar-stock:hover, .btn-reporte:hover {
+    background-color: #9dd9d2;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Botones aprobar y rechazar */
+.btn-aprobar {
+    background-color: #27ae60;
+}
+
+.btn-aprobar:hover {
+    background-color: #2ecc71;
+}
+
+.btn-rechazar {
+    background-color: #e74c3c;
+}
+
+.btn-rechazar:hover {
+    background-color: #c0392b;
+}
+
+/* Mensajes de estado o error */
+.message {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f1c40f;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.message.error {
+    background-color: #e74c3c;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        width: 200px;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .toggle-menu {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background-color: #392f5a;
+        color: white;
+        padding: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 1100;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    table th, table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    form input, form select, form textarea {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .btn-aprobar, .btn-rechazar {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .btn-publicar, .btn-crear, .btn-asignar, .btn-actualizar-stock, .btn-reporte {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+/* Media Queries para pantallas de celulares */
+@media (max-width: 480px) {
+    .sidebar {
+        width: 180px;
+    }
+
+    .content {
+        padding: 10px;
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    form input, form select, form textarea {
+        font-size: 10px;
+        padding: 6px;
+    }
+
+    .btn-aprobar, .btn-rechazar {
+        font-size: 10px;
+        padding: 6px 10px;
+    }
+
+    .btn-publicar, .btn-crear, .btn-asignar, .btn-actualizar-stock, .btn-reporte {
+        font-size: 10px;
+        padding: 6px;
+    }
+}
+
+/* Ajustes generales */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden; /* Evitar desplazamiento horizontal en toda la página */
+}

@@ -1,0 +1,187 @@
+/* Fuente Poppins de Google Fonts */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0 20px; /* Añade un poco de padding para evitar que los elementos toquen los bordes */
+}
+
+/* Contenedor del formulario */
+.signup-container, .login-container {
+    background-color: #fff8f0;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+/* Título */
+.signup-container h2, .login-container h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Etiquetas */
+label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #555;
+    display: block;
+    font-size: 14px;
+}
+
+/* Inputs */
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+    font-size: 14px;
+    color: #333;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #ff8811;
+    outline: none;
+}
+
+/* Iconos en los inputs */
+.input-icon {
+    position: relative;
+}
+
+.input-icon i.icon-normal {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-30%);
+    color: #888;
+    font-size: 16px;
+}
+
+.input-icon i.toggle-password {
+    position: absolute;
+    right: 10px; 
+    top: 50%;
+    cursor: pointer;
+    font-size: 15px; 
+    color: #888;
+    transform: translateY(-30%);
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    padding-left: 40px; /* Espacio para el icono */
+}
+
+/* Botón de registro */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff8811;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #392f5a;
+}
+
+/* Estilos para el enlace de inicio de sesión */
+p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+p a {
+    color: #ff8811;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Errores de contraseña */
+span#password-error {
+    color: red;
+    font-size: 12px;
+    display: block;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Media Query para pantallas pequeñas (tablets y móviles) */
+@media (max-width: 768px) {
+    /* Ajustes generales de padding en pantallas pequeñas */
+    body {
+        padding: 0 15px;
+    }
+    
+    /* Formulario ocupa casi toda la pantalla */
+    .signup-container, .login-container {
+        max-width: 100%;
+        padding: 20px;
+    }
+    
+    /* Texto de encabezado más pequeño */
+    .signup-container h2, .login-container h2 {
+        font-size: 20px;
+    }
+
+    /* Inputs y botón más pequeños para mejor ajuste en pantallas pequeñas */
+    input[type="text"], input[type="email"], input[type="password"],
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /* Ajustes adicionales en iconos para inputs */
+    .input-icon i.icon-normal,
+    .input-icon i.toggle-password {
+        font-size: 14px;
+    }
+}
+
+/* Media Query para pantallas extra pequeñas (móviles muy pequeños) */
+@media (max-width: 480px) {
+    /* Texto de encabezado aún más pequeño */
+    .signup-container h2, .login-container h2 {
+        font-size: 18px;
+    }
+
+    /* Reducción de padding para que se ajusten bien en pantallas pequeñas */
+    .signup-container, .login-container {
+        padding: 15px;
+    }
+
+    /* Inputs y botón con tamaño reducido */
+    input[type="text"], input[type="email"], input[type="password"],
+    button {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    /* Ajustes adicionales en iconos para inputs */
+    .input-icon i.icon-normal,
+    .input-icon i.toggle-password {
+        font-size: 12px;
+    }
+}

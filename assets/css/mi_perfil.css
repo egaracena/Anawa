@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff8f0;
+}
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo a {
+    margin-right: 20px; /* Espacio entre el logo y los enlaces */
+}
+
+.logo img {
+    width: 120px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px; /* Espaciado entre cada enlace */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #392F5A;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FF8811; /* Cambia el color al pasar el cursor */
+    border-bottom: 2px solid #FF8811; /* Añade una línea debajo del enlace */
+}
+
+.logout-btn {
+    background-color: #FF8811; /* Color del botón (rojo suave) */
+    color: #fff; /* Color del texto en el botón */
+    padding: 12px 15px; /* Espaciado interno del botón */
+    border: none;
+    border-radius: 30px; /* Bordes redondeados */
+    font-size: 1rem;
+    font-weight: 400;    
+    text-decoration: none; /* Quitar el subrayado del enlace */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover en el botón */
+.logout-btn:hover {
+    background-color: #9dd9d2; /* Color del botón al pasar el cursor (rojo más oscuro) */
+    cursor: pointer;
+}
+
+
+/* Estilo para las secciones */
+section {
+    width: 70%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Perfil del artesano */
+.profile-section {
+    margin-bottom: 20px;
+}
+
+.profile-section h2 {
+    color: #392f5a;
+    font-size: 24px;
+    border-bottom: 2px solid #392f5a;
+    padding-bottom: 5px;
+}
+
+.profile-section p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Estado del inventario */
+.inventory-section h2 {
+    color: #392f5a;
+    font-size: 22px;
+    border-bottom: 2px solid #392f5a;
+    padding-bottom: 5px;
+}
+
+.inventory-section h3 {
+    color: #333;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.inventory-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.inventory-section ul li {
+    font-size: 16px;
+    padding: 8px;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.inventory-section ul li.agotado {
+    color: #ff4a57;
+    font-weight: bold;
+}
+
+.inventory-section ul li.bajo-inventario {
+    color: #ff8c00;
+    font-weight: bold;
+}
+
+/* Ventas e ingresos */
+.ventas-ingresos h3 {
+    color: #392f5a;
+    font-size: 22px;
+    border-bottom: 2px solid #392f5a;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.ventas, .ingresos, .productos-mas-vendidos {
+    margin-bottom: 20px;
+}
+
+.ventas h4, .ingresos h4, .productos-mas-vendidos h4 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.ventas p, .ingresos p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.productos-mas-vendidos ul {
+    list-style: none;
+    padding: 0;
+}
+
+.productos-mas-vendidos ul li {
+    font-size: 16px;
+    padding: 8px;
+    background-color: #e8f7e8;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Estilos para pantallas móviles (teléfonos) */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .btn-container button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    table {
+        font-size: 12px;
+        overflow-x: auto;
+    }
+}
+
+/* Estilos para pantallas medianas (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .form-container {
+        width: 80%;
+        padding: 15px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
+
+/* Estilos para pantallas grandes (escritorio) */
+@media (min-width: 1025px) {
+    .form-container {
+        width: 60%;
+        padding: 20px;
+    }
+
+    .navbar {
+        justify-content: space-around;
+    }
+
+    table {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,226 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+h2, h3 {
+    text-align: center;
+    color: #333;
+}
+
+p {
+    font-size: 1.1em;
+    color: #666;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Estilos del contenedor de lista de selección y checkbox */
+#metodoPago, #confirmTransferencia {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#paymentForm {
+    padding: 20px;
+    background-color: #fafafa;
+    border-radius: 10px;
+    border: 1px solid #e1e1e1;
+    text-align: center;
+}
+
+/* Botón de pago */
+#submitPago {
+    background-color:#FF8811;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#submitPago:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+#submitPago:hover:enabled {
+    background-color: #218838;
+}
+
+/* Ocultar secciones cuando se envía el pago */
+.hide-elements {
+    display: none;
+}
+
+/* QR Image */
+img {
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+}
+
+#tarjetaFields, #transferenciaFields {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="month"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Volver a productos */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #FF8811;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Mensaje de éxito */
+.success-message {
+    font-size: 1.2em;
+    color: #FF8811;
+    text-align: center;
+    display: none;
+}
+
+#tarjetasGuardadas {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.tarjetaGuardada {
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 200px;
+    height: 120px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.tarjetaGuardada:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.tarjetaGuardada p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Estilos para pantallas móviles (teléfonos) */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .btn-container button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    table {
+        font-size: 12px;
+        overflow-x: auto;
+    }
+}
+
+/* Estilos para pantallas medianas (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .form-container {
+        width: 80%;
+        padding: 15px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
+
+/* Estilos para pantallas grandes (escritorio) */
+@media (min-width: 1025px) {
+    .form-container {
+        width: 60%;
+        padding: 20px;
+    }
+
+    .navbar {
+        justify-content: space-around;
+    }
+
+    table {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,258 @@
+/* Estilo general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff8f0;
+    overflow-x: hidden; /* Evita desplazamiento horizontal */
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* Permite que los elementos se ajusten */
+}
+
+.logo img {
+    width: 120px;
+    max-width: 100%; /* Ajuste para evitar desbordamiento */
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #392F5A;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FF8811;
+    border-bottom: 2px solid #FF8811;
+}
+
+.logout-btn {
+    background-color: #FF8811;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover */
+.logout-btn:hover {
+    background-color: #9dd9d2;
+}
+
+/* Dashboard */
+.dashboard {
+    padding: 20px;
+}
+
+.dashboard h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #333;
+}
+
+/* Formulario de productos */
+.product-actions {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.product-actions input,
+.product-actions textarea,
+.product-actions select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-btn {
+    width: 100%;
+    background-color: #FF8811;
+    color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Tabla de productos */
+.product-list {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Permite desplazamiento horizontal en móviles */
+}
+
+.product-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.product-list th,
+.product-list td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* Botón de Cerrar Sesión */
+.logout-btn {
+    display: inline-block;
+    background-color: #E76B00; /* Un naranja más oscuro para resaltar */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad */
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efecto hover */
+.logout-btn:hover {
+    background-color: #FF8811; /* Color más claro al pasar el cursor */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+/* Efecto active */
+.logout-btn:active {
+    transform: translateY(1px); /* Efecto de clic */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajuste para móviles */
+@media (max-width: 600px) {
+    .logout-btn {
+        width: 90%; /* Ocupa casi todo el ancho en móviles */
+        margin: 10px auto; /* Centrado y con margen */
+    }
+}
+
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .logo img {
+        width: 100px;
+        margin-bottom: 10px;
+    }
+
+    .logout-btn {
+        width: 100%;
+    }
+
+    .dashboard {
+        padding: 10px;
+    }
+
+    .product-actions {
+        padding: 15px;
+    }
+
+    .product-actions input,
+    .product-actions textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .form-btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .product-list table {
+        font-size: 14px;
+    }
+}
+
+/* Estilos para pantallas medianas (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .dashboard {
+        padding: 20px;
+    }
+
+    .product-actions {
+        padding: 20px;
+    }
+
+    .form-btn {
+        font-size: 1rem;
+    }
+}
+
+/* Estilos para pantallas grandes (escritorio) */
+@media (min-width: 1025px) {
+    .navbar {
+        justify-content: space-around;
+    }
+
+    .dashboard {
+        padding: 40px;
+    }
+
+    .product-actions {
+        padding: 30px;
+    }
+
+    .form-btn {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+
+    .product-list table {
+        font-size: 16px;
+    }
+}

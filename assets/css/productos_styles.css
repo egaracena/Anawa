@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFF8F0;
+}
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo a {
+    margin-right: 20px; /* Espacio entre el logo y los enlaces */
+}
+
+.logo img {
+    width: 120px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px; /* Espaciado entre cada enlace */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #392F5A;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FF8811; /* Cambia el color al pasar el cursor */
+    border-bottom: 2px solid #FF8811; /* Añade una línea debajo del enlace */
+}
+
+.login-btn,
+.register-btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #FFF8F0;
+}
+
+.login-btn {
+    background-color: #FF8811;   
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.login-btn:hover {
+    background-color: #9dd9d2;
+}
+
+
+.welcome-msg {
+    font-family: 'Poppins', sans-serif;
+    color: #392F5A; /* Color del texto */
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre el texto y el botón */
+    margin-right: 20px; /* Separación del mensaje del borde derecho */
+}
+
+/* Estilo del botón de cerrar sesión */
+.logout-btn {
+    background-color: #FF8811; /* Color del botón (rojo suave) */
+    color: #fff; /* Color del texto en el botón */
+    padding: 12px 15px; /* Espaciado interno del botón */
+    border: none;
+    border-radius: 30px; /* Bordes redondeados */
+    font-size: 1rem;
+    font-weight: 400;    
+    text-decoration: none; /* Quitar el subrayado del enlace */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover en el botón */
+.logout-btn:hover {
+    background-color: #9dd9d2; /* Color del botón al pasar el cursor (rojo más oscuro) */
+    cursor: pointer;
+}
+
+/* Contenedor principal de la lista de productos */
+.products-list {
+    width: 100%;
+    padding: 40px 20px;   
+}
+
+.products-list h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Contenedor de las tarjetas de productos */
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Tarjetas en cuadrícula */
+    gap: 20px;
+    width: 100%;
+}
+
+/* Estilo de cada tarjeta de producto */
+.product-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-item:hover {
+    transform: translateY(-5px); /* Elevar ligeramente al pasar el cursor */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+.product-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Título del producto */
+.product-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Descripción del producto */
+.product-item p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Estilo específico para los textos de categoría y precio */
+.product-item p strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Botones de acción */
+.add-to-cart-btn, .view-more-btn {
+    background-color: #FF8811;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%; /* Ocupar todo el ancho de la tarjeta */
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.add-to-cart-btn:hover, .view-more-btn:hover {
+    background-color: #E76B00;
+    transform: translateY(-3px); /* Leve efecto de elevación al pasar el cursor */
+}
+
+.add-to-cart-btn:active, .view-more-btn:active {
+    transform: scale(0.98); /* Efecto de reducción al hacer clic */
+}
+
+/* Estilo del modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Mantener el modal en su lugar */
+    z-index: 1000; /* Asegurarse de que esté encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    overflow: auto; /* Habilitar el desplazamiento si es necesario */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro con opacidad */
+}
+
+/* Contenido del modal */
+/* Contenido del modal */
+.modal-content {
+    background-color: #fff; /* Fondo blanco para el contenido */
+    margin: 10% auto; /* 10% desde la parte superior y centrado */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #888; /* Borde del modal */
+    width: 90%; /* Ancho del modal (ajusta según sea necesario) */
+    max-width: 900px; /* Ancho máximo aumentado a 800px */
+}
+
+
+/* Botón de cerrar */
+.close-btn {
+    color: #aaa; /* Color del botón de cerrar */
+    float: right; /* Alinear a la derecha */
+    font-size: 28px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black; /* Color al pasar el mouse o enfocar */
+    text-decoration: none; /* Sin subrayado */
+    cursor: pointer; /* Cambiar cursor al pasar el mouse */
+}
+
+/* Estilos para pantallas móviles (teléfonos) */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .btn-container button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    table {
+        font-size: 12px;
+        overflow-x: auto;
+    }
+
+    .nav-links {
+        margin-bottom: 20px; /* Ajusta el margen inferior para separar el botón */
+    }
+}
+
+/* Estilos para pantallas medianas (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .form-container {
+        width: 80%;
+        padding: 15px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
+
+/* Estilos para pantallas grandes (escritorio) */
+@media (min-width: 1025px) {
+    .form-container {
+        width: 60%;
+        padding: 20px;
+    }
+
+    .navbar {
+        justify-content: space-around;
+    }
+
+    table {
+        font-size: 16px;
+    }
+}
